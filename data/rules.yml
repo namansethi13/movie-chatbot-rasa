@@ -1,0 +1,52 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: ask for movie
+  steps:
+  - intent: greet
+  - slot_was_set:
+      - movie_name: null
+  - action: movie_form
+  - active_loop: movie_form
+
+- rule: say hi
+  steps:
+  - intent: greet
+  - slot_was_set:
+      - movie_name: "hitman"
+  - action: utter_greet
+
+
+
+- rule: submit form
+  condition:
+  - active_loop: movie_form
+  steps:
+  - action: movie_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_movie_searching
+  - action: action_get_movie_details
+
+
+- rule: tell capabilities
+  steps:
+  - intent: bot_capabilities
+  - action: utter_capabilities
+
+
+- rule: default message
+  steps:
+  - action: utter_default_fallback

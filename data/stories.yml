@@ -1,0 +1,126 @@
+version: "3.1"
+
+stories:
+
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_ask_movie_name
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+# - story: happy path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: bot_challenge
+#   - action: utter_iamabot
+
+# - story: path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: goodbye
+#   - action: utter_goodbye
+
+
+- story: get director of the movie
+  steps:
+  - intent: know_movie_director
+  - slot_was_set:
+            - movie_name: "Hitman"
+  - action: action_get_movie_director
+
+
+- story: get rating of the movie
+  steps:
+  - intent: know_movie_rated
+  - slot_was_set:
+            - movie_name: "Hitman"
+  - action: action_get_movie_rated
+
+- story: get director of the movie
+  steps:
+  - intent: know_release_date
+  - slot_was_set:
+            - movie_name: "Hitman"
+  - action: action_get_movie_year
+
+
+- story: Get movie rated
+  steps:
+  - intent: know_movie_rated
+  - slot_was_set:
+    - movie_name: "The Dark Knight"
+  - action: action_get_movie_rated
+
+
+- story: Get movie genre
+  steps:
+  - intent: know_movie_genre
+  - slot_was_set:
+    - movie_name: "Inception"
+  - action: action_get_movie_genre
+
+
+- story: Get movie writer
+  steps:
+  - intent: know_movie_writer
+  - slot_was_set:
+    - movie_name: "Interstellar"
+  - action: action_get_movie_writer
+
+
+- story: Get movie rated
+  steps:
+  - intent: know_movie_rated
+  - slot_was_set:
+    - movie_name: "The Dark Knight"
+  - action: action_get_movie_rated
+
+
+- story: Get movie actors
+  steps:
+  - intent: know_movie_actors
+  - slot_was_set:
+    - movie_name: "Avatar"
+  - action: action_get_movie_actors
+
+
+- story: Get movie plot
+  steps:
+  - intent: know_movie_plot
+  - slot_was_set:
+    - movie_name: "The Shawshank Redemption"
+  - action: action_get_movie_plot
+
+
+- story: Get movie language
+  steps:
+  - intent: know_movie_language
+  - slot_was_set:
+    - movie_name: "Pulp Fiction"
+  - action: action_get_movie_language
+
+
+- story: Get movie country
+  steps:
+  - intent: know_movie_country
+  - slot_was_set:
+    - movie_name: "Forrest Gump"
+  - action: action_get_movie_country
+
+
+- story: Get movie poster
+  steps:
+  - intent: know_movie_poster
+  - slot_was_set:
+    - movie_name: "The Lord of the Rings"
+  - action: action_get_movie_poster
+
+- story: Get another movie
+  steps:
+  - intent: new_movie
+  - action: action_get_new_movie
+  - action: movie_form
+  - active_loop: movie_form

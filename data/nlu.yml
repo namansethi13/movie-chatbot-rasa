@@ -1,0 +1,258 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: know_director
+  examples: |
+    - The movie was directed by whom?
+    - Tell me the name of the director of the movie.
+    - The movie's director is what I want to find out.
+    - I am curious about who directed the movie.
+    - The person who directed the movie is what I am looking for.
+    - Who was in charge of directing the movie?
+    - I would like to learn the director's name for the movie.
+    - The movie has a director, and I want to know who it is.
+    - Who is the director of the movie? That is my question.
+
+- intent: know_release_date
+  examples: |
+    - When was the movie released?
+    - The release date of the movie is what I am interested in.
+    - Tell me when the movie came out.
+    - I am looking for the date when the movie was launched.
+    - The movie's launch date is my query.
+    - When was the movie launched?
+    - Can you tell me when the movie was released?
+    - I am curious about the release date of the movie.
+    - The date when the movie was released is what I want to find out.
+    - What is the release date of the movie?
+
+- intent: know_movie_rated
+  examples: |
+    - Tell me the movie rating
+    - How has the movie been rated?
+    - What's the rating for the movie?
+    - Provide the movie rating, please
+    - Rate the movie
+    - Rate of the movie?
+    - How good is the movie rated?
+    - Give me the rating
+    - What rating does the movie have?
+    - What's the movie's rating?
+    - Can you tell me the rating of the movie?
+    - I want to know the rating of the movie
+    - Any idea about the movie's rating
+
+- intent: know_movie_genre
+  examples: |
+    - What is the genre of the movie?
+    - Tell me the movie genre
+    - Which genre does the movie belong to?
+    - What genre is the movie?
+    - Provide the movie genre, please
+    - Genre of the movie?
+    - How is the movie categorized?
+    - Tell me about the movie genre
+    - Any idea about the movie's genre
+    - What's the genre for the movie?
+    - I want to know the genre of the movie
+
+
+
+- intent: know_movie_writer
+  examples: |
+    - Who wrote the movie?
+    - Tell me the movie writer
+    - Who is the writer of the movie?
+    - Provide the movie writer, please
+    - Writer of the movie?
+    - Who penned the movie?
+    - Tell me about the movie writer
+    - Any idea about the movie's writer
+    - Who is credited as the writer of the movie?
+    - I want to know the writer of the movie
+    - Writer's name for the movie?
+
+
+
+- intent: know_movie_director
+  examples: |
+    - Who directed the movie?
+    - Tell me the movie director
+    - Who is the director of the movie?
+    - Provide the movie director, please
+    - Director of the movie?
+    - Who helmed the movie?
+    - Tell me about the movie director
+    - Any idea about the movie's director
+    - Who is credited as the director of the movie?
+    - I want to know the director of the movie
+    - Director's name for the movie?
+
+
+- intent: know_movie_actors
+  examples: |
+    - Who are the actors in the movie?
+    - Tell me the movie actors
+    - Which actors star in the movie?
+    - Provide the movie actors, please
+    - Actors of the movie?
+    - Who played the roles in the movie?
+    - Tell me about the movie actors
+    - Any idea about the movie's actors
+    - Who are the main cast members of the movie?
+    - I want to know the actors of the movie
+    - Actors' names for the movie?
+
+
+
+- intent: know_movie_plot
+  examples: |
+    - What is the plot of the movie?
+    - Tell me the movie plot
+    - What's the storyline for the movie?
+    - Provide the movie plot, please
+    - Plot of the movie?
+    - Give me a summary of the movie's plot
+    - Tell me about the movie plot in brief
+    - Any idea about the movie's plot
+    - I want to know the plot of the movie
+    - Plot summary for the movie?
+
+
+- intent: know_movie_language
+  examples: |
+    - What language is the movie in?
+    - Tell me the movie language
+    - Which language is spoken in the movie?
+    - What language does the movie use?
+    - Provide the movie language, please
+    - Language of the movie?
+    - In which language is the movie made?
+    - Tell me about the movie language
+    - Any idea about the movie's language
+    - I want to know the language of the movie
+
+
+- intent: know_movie_country
+  examples: |
+    - What country is the movie from?
+    - Tell me the movie country
+    - Which country produced the movie?
+    - What country did the movie originate from?
+    - Provide the movie country, please
+    - Country of the movie?
+    - In which country was the movie made?
+    - Tell me about the movie country
+    - Any idea about the movie's country
+    - I want to know the country of the movie
+
+
+- intent: know_movie_poster
+  examples: |
+    - Show me the movie poster
+    - Can you display the movie poster?
+    - What does the movie poster look like?
+    - Provide the movie poster, please
+    - Poster of the movie?
+    - Display the poster of the movie
+    - Show me the poster of the movie "Title"
+    - Tell me about the movie poster
+    - Any idea about the movie's poster
+    - I want to see the poster of the movie
+
+
+
+- intent: new_movie
+  examples: |
+    - I want to enquire about another movie
+    - I want to know about another movie
+    - another movie
+    - details about another movie
+    - one more movie
+    - tell me about another movie
+    - Tell me about a different film.
+
+- intent: bot_capabilities
+  examples: |
+    - What can you do?
+    - What can the bot do?
+    - What are your abilities?
+    - Can you tell me what you're capable of?
+    - What functionalities do you have?
+    - What are your skills?
+    - What tasks can you perform?
+    - Show me what you can do.
+    - What do you know how to do?
+    - List your capabilities.
+    - I want to know your abilities.
+    - Can you do anything else?
+    - Tell me about your features.
+    - Are there any other things you can do?
+    - Show me your functionalities.
+    - What services can you provide?
+    - Are you capable of doing more?
+    - Tell me about your capabilities.
+    - What are the things you're able to do?
+    - Inform me about your functions.
+    - Can you share your capabilities?
+
+
+- intent: know_multiple_details
+  examples: |
+    - tell me the following: actor, director, year, poster, rated, genre, writer, country, plot, language, actors
+    - what can you tell me about it? I want to know the actor, director, year, poster, rated, genre, writer, country, plot, language, and actors.
+    - give me some details like actor, director, year, poster, rated, genre, writer, country, plot, language, and actors.
+    - please provide actor, director, year, poster, rated, genre, writer, country, plot, language, and actors for the movie.
+    - I'm interested in actor, director, year, poster, rated, genre, writer, country, plot, language, and actors. Tell me more.
+    - can you give me information about the actor, director, year, poster, rated, genre, writer, country, plot, language, and actors?
+    - list the actor, director, year, poster, rated, genre, writer, country, plot, language, and actors for the movie.
+    - I'd like to know the actor, director, year, poster, rated, genre, writer, country, plot, language, and actors of the movie.
+    - tell me actor, director, year, poster, rated, genre, writer, country, plot, language, and actors for this movie.
+    - what are the actor, director, year, poster, rated, genre, writer, country, plot, language, and actors of the movie?
+    - share details like actor, director, year, poster, rated, genre, writer, country, plot, language, and actors.
+    - actor, director, year, poster, rated, genre, writer, country, plot, language, and actors, please.
+    - provide me with actor, director, year, poster, rated, genre, writer, country, plot, language, and actors details.
+    - I want to know actor, director, year, poster, rated, genre, writer, country, plot, language, and actors for this movie.
+
+
+# - intent: movie
+#   examples: |
+#     - [inception] (movie_name)
+    

@@ -1,0 +1,89 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - ask_for_movie
+  - know_director
+  - know_release_date
+  - know_movie_rated
+  - know_movie_genre
+  - know_movie_writer
+  - know_movie_director
+  - know_movie_actors
+  - know_movie_plot
+  - know_movie_language
+  - know_movie_country
+  - know_movie_poster
+  - new_movie
+  - bot_capabilities
+  - know_multiple_details
+# entities:
+#   - movie_name
+forms:
+  movie_form:
+    required_slots:
+      - movie_name
+slots:
+ movie_name:
+  type: text
+  influence_conversation: true
+  mappings:
+  - type: from_text
+    conditions:
+    - active_loop: movie_form
+      requested_slot: movie_name
+responses:
+  utter_greet:
+  - text : "Hey!"
+  - text : "Hi!"
+
+  
+  utter_ask_movie_name:
+  - text: "which movie do you want to enquire about?"
+  - text: "Please tell me the name of the movie you want to inquire about."
+  - text: "Which movie are you interested in getting more information about?"
+  - text: "I'm ready to assist you with movie details. Please provide me with the name of the movie you'd like to inquire about."
+  - text: "Feel free to share the name of the movie you want to know more about, and I'll provide you with the relevant information."
+  - text: "To get started, kindly let me know the title of the movie you wish to inquire about."
+  - text: "Ready to dive into the world of movies! Just give me the name of the movie you'd like to inquire about."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a movie information bot."
+
+  utter_movie_searching:
+  - text: "I am searching for the movie..."
+
+  utter_capabilities:
+  - text: "I'm here to provide information about movies, including details about actors, directors, release dates, and more."
+  - text: "My capabilities include giving you insights into movies, like cast details, directors, and other interesting facts."
+  - text: "As a movie assistant, I can assist you with movie-related inquiries. I can tell you about actors, directors, and other interesting movie details."
+  - text: "I'm equipped to provide information about movies. I can give you details about the cast, crew, and other aspects of films."
+  - text: "I can answer your questions about movies, ranging from actor information to director details and everything in between."
+
+  utter_default_fallback:
+  - text: "I didn't get it"
+  
+
+actions:
+- action_get_movie_details
+- action_get_movie_director
+- action_get_movie_rated
+- action_get_movie_year
+- action_get_movie_genre
+- action_get_movie_writer
+- action_get_movie_actors
+- action_get_movie_plot
+- action_get_movie_language
+- action_get_movie_country
+- action_get_movie_poster
+- action_get_new_movie
+- action_find_entities
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

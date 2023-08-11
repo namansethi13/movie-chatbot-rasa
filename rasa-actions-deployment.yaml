@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rasa-actions
+  namespace: rasa-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rasa-actions
+  template:
+    metadata:
+      labels:
+        app: rasa-actions
+    spec:
+      containers:
+        - name: actions
+          image: namansethi13/rasa-sdk-movie-bot:latest
+    
+      # volumes:
+      #   - name: actions-volume
+      #     hostPath:
+      #       path: /C:/Users/namsethi1/learning_rasa/three/actions
+      # containers:
+      #   - name: actions
+      #     image: namansethi13/rasa-sdk-movie-bot:latest
+      #     volumeMounts:
+      #       - name: actions-volume
+      #         mountPath: /app/actions/

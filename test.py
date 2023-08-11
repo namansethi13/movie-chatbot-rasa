@@ -1,0 +1,1 @@
+#docker run -it -p 8000:8000 --net bot-network  -v  C:\Users\namsethi1\learning_rasa\three:/app rasa/rasa run --enable-api --cors "*"  --port 8000

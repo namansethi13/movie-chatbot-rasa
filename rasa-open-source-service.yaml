@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rasa-open-source-service
+  namespace: rasa-backend
+spec:
+  selector:
+    app: rasa-open-source
+  ports:
+    - protocol: TCP
+      port: 5005
+      targetPort: 5005

@@ -1,0 +1,16 @@
+kubectl --namespace rasa-backend get pods
+kubectl apply -f rasa-open-source-deployment.yaml
+kubectl --namespace rasa-backend delete deployment rasa-open-source
+kubectl --namespace rasa-backend logs rasa-open-source-987fc6d87-bxc4t
+kubectl describe --namespace rasa-backend Pod rasa-open-source-987fc6d87-zqfcx
+
+created a kubernetes clluster using kind
+
+made a namespace rasa-backend
+created yaml files
+
+services running fine
+deployment error
+
+rasa os pod model permission
+and rasa action repo not uploading to the docker hub

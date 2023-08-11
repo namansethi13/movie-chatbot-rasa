@@ -38,6 +38,7 @@ responses:
   utter_greet:
   - text : "Hey!"
   - text : "Hi!"
+  - text : "Hello!"
 
   
   utter_ask_movie_name:

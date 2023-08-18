@@ -1,0 +1,28 @@
+version: '3'
+services:
+  postgres-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: rasa-logs
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: toor
+    ports:
+      - "5432:5432"
+
+  action-server:
+    image: namansethi13/rasa-sdk-movie-bot
+    depends_on:
+      - postgres-db
+    ports:
+    - "5055:5055"
+    user: "1000"
+
+  rasa-service:
+    image: namansethi13/rasa-os:v2
+    depends_on:
+      - action-server
+    
+    ports:
+    - "5005:5005"
+    user: "1001"
+
